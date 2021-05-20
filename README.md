@@ -4,7 +4,6 @@ This is a complete ecommerce website made using django in which anyone can buy h
 So what are you waiting for? Click on the link and watchout the project.
 
 ## Some major points
-* The app is made in vue.js. The whole page is divided into various major components such as header, carousel, footer,etc. All these components are attached to Home page by exporting and importing functions.The major app controls are controlled using the app.vue and main.js file. All the png, jpg and media files are stored in the assets and are binded using the vue v-bind directive.
 * The app is made in django(python). The website compromise of frontend and backend.
 * In the frontend part, the pages are controlled via view template engine, a base html page is made which consist of headers and footer and the same page is rendered on all the other pages.The contents of the new formed pages are written inside the django scriptlet tags. 
 * The URL are configured by urls.py which uses the view.py and their methods to render the pages.
