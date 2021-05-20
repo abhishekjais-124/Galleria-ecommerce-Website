@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import cloudinary_storage
+from cloudinary.models import CloudinaryField
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +29,6 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = False
 
 ALLOWED_HOSTS = ["galleria-ecommerce.herokuapp.com", "localhost"]
-# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -153,7 +152,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'theprogrammerneo@gmail.com'
 
 EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
-# EMAIL_HOST_PASSWORD = "7565097460"
 
 
 CLOUDINARY_STORAGE = {
@@ -161,5 +159,6 @@ CLOUDINARY_STORAGE = {
     'API_KEY': os.environ['API_KEY'],
     'API_SECRET': os.environ['API_SECRET']
 }
+
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
